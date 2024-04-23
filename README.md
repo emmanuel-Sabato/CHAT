@@ -1,3 +1,1 @@
-"# CHAT" 
-"# CHAT" 
-"# CHAT" 
+GOD be above all!!!
