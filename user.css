@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, rgb(138, 9, 80), rgb(2, 40, 253));
+}
+
+.wrapper {
+    background: #fff;
+    width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+        0 32px 64 -48px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper .users {
+    padding: 20px;
+}
+
+.wrapper .users header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.wrapper .users header .content {
+    padding-left: 10px;
+    display: flex;
+}
+
+.wrapper .users header .content img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.wrapper .users header .content .details {
+    margin-left: 15px;
+}
+
+.wrapper .users header .content .details span {
+    font-size: 18px;
+    font-weight: 500px;
+}
+
+.wrapper .users header .logout {
+    color: #fff;
+    font-size: 17px;
+    background: radial-gradient(circle, rgb(0, 26, 255), rgb(174, 0, 255), rgb(129, 1, 72));
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 0 0 128px 0 rgba(15, 18, 209, 0.562),
+            0 32px 64 -48px rgba(184, 5, 238, 0.5);
+}
+
+.wrapper .users .search {
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper .users .search .text {
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.wrapper .users .search input {
+    position: absolute;
+    height: 42px;
+    width: calc(98% - 50px);
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    margin-left: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.wrapper .users .search input.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper .users .search button {
+    width: 47px;
+    height: 42px;
+    border: none;
+    outline: none;
+    color: #333;
+    background: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 17px;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.2s ease;
+}
+
+.wrapper .users .search button.active {
+    color: #fff;
+    background: #333;
+}
+
+.wrapper .users .search button.active i::before {
+    content: "\f00d";
+}
+
+.wrapper .users .users-list {
+    position: relative;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.wrapper .users .users-list::-webkit-scrollbar {
+    width: 0px;
+}
+
+.wrapper .users .users-list a {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 15px;
+    page-break-after: 10px;
+    border-bottom-color: #f1f1f1;
+}
+
+.wrapper .users .users-list a:last-child {
+    border: none;
+    margin-bottom: 0px;
+}
+
+.wrapper .users .users-list a .content {
+    display: flex;
+    margin-left: 0px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500px;
+    color: #000;
+}
+
+.wrapper .users .users-list a .content img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.wrapper .users .users-list a .content p {
+    color: #67676a;
+    padding-left: 10px;
+}
+
+.wrapper .users .users-list a .status-dot {
+    font-size: 12px;
+    color: #468669;
+}
+
+/* we will use this class in php*/
+
+.wrapper .users .users-list a .status-dot.offline {
+    color: #ccc;
+}
+
+/*chat css*/
+
+.wrapper .chat-area header {
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+}
+
+.wrapper .chat-area header .back-icon {
+    font-size: 18px;
+    color: #333;
+}
+
+.wrapper .chat-area header img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin: 0 15px;
+}
+
+.wrapper .chat-area header span {
+    font-size: 17px;
+    font-weight: 500px;
+}
+
+.wrapper .chat-area .chat-box {
+    height: 450px;
+    overflow-y: auto;
+    background: radial-gradient(circle, rgb(199, 199, 202), rgb(187, 178, 190), rgb(133, 98, 117));
+    padding: 10px 30px 20px 30px;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
+                inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
+}
+
+.wrapper .chat-area .chat-box::-webkit-scrollbar {
+    width: 0;
+}
+
+.wrapper .chat-area .chat-box .chat {
+    margin: 15px 0;
+}
+
+.wrapper .chat-area .chat-box .chat p {
+    word-break: break-all;
+    padding: 8px 16px;
+    box-shadow: 0 0 32px rgb(0 0 0 / 8%),
+                0 16px 16px -16px rgb(0 0 0 / 10%);
+}
+
+.wrapper .chat-area .chat-box .outgoing {
+    display: flex;
+}
+
+.wrapper .chat-area .chat-box .outgoing .details {
+    margin-left: auto;
+    max-width: calc(100% - 130px);
+}
+
+.wrapper .chat-area .chat-box .outgoing .details p {
+    background: #333;
+    color: #fff;
+    border-radius: 18px 18px 0 18px;
+}
+
+.wrapper .chat-area .chat-box .incoming {
+    display: flex;
+    align-items: flex-end;
+}
+
+.wrapper .chat-area .chat-box .incoming img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.wrapper .chat-area .chat-box .incoming .details {
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 130px);
+}
+
+.wrapper .chat-area .chat-box .incoming .details p {
+    color: #333;
+    background: #fff;
+    border-radius: 18px 18px 18px 0;
+}
+
+.wrapper .chat-area .typing-area {
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper .chat-area .typing-area input {
+    height: 26px;
+    width: calc(100% - 58px);
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.wrapper .chat-area .typing-area button {
+    width: 55px;
+    border: none;
+    outline: none;
+    background: #333;
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}

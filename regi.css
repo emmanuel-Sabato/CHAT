@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, rgb(177, 74, 143), rgb(2, 40, 253));
+}
+
+.wrapper {
+    background: #fff;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64 -48px rgba(0,0,0,0.5);
+}
+
+/* Signup Form CSS Code  */
+
+.wrapper .form {
+    padding: 25px 30px;
+}
+
+.wrapper .form header {
+    font-size: 25px;
+    font-weight: 600px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    border-bottom: 1px solid rgb(253, 254, 255);
+}
+
+.wrapper .form form {
+    margin-left: 20px;
+}
+
+.wrapper .form form .error-txt {
+    color: #721c24;
+    background: #dba8ac;
+    padding: 8px 10px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb;
+    width: 95%;
+    display: none;
+}
+
+
+.wrapper .form form .field {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.wrapper .form .field label {
+    margin-bottom: 2px;
+}
+
+.wrapper .form form .field input {
+    outline: none;
+}
+
+.wrapper .form form .input input {
+    height: 40px;
+    width: 95%;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.wrapper .form form .image input {
+    font-size: 17px;
+}
+
+.wrapper .form form .name-details .button input {
+    margin-top: 13px;
+    height: 45px;
+    width: 95%;
+    border: none;
+    font-size: 17px;
+    font-weight: 400px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.wrapper .form form .field i {
+    position: absolute;
+    right: 26px;
+    color: #ccc;
+    top: 40px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.wrapper .form form .field i.active::before {
+    color: #333;
+    content: "\f070";
+}
+
+.wrapper .link {
+    text-align: center;
+    font-size: 17px;
+}
+
+.wrapper .link a {
+    color: #333;
+}
+
+.wrapper .link a:hover {
+    text-decoration: underline;
+}
